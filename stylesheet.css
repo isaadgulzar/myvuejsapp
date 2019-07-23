@@ -1,0 +1,68 @@
+body
+{
+    font-size: 23px;
+}
+.container
+{
+    width: 400px;
+    height: 500px;
+    border: 2px solid #EA1530;
+    margin: 5px;
+    float: left;
+}
+.customizeContainer
+{
+    float: left;
+    width: 400px;
+    height: 500px;
+    border: 2px solid #EA1530;
+    margin: 5px;
+    background: #15EACF;
+}
+.heading
+{
+    text-align: center;
+    color: #EA1530;
+}
+.lineThrough 
+{
+    text-decoration: line-through;
+    
+}
+.disabledCartButton
+{
+    background-color: grey;
+    
+}
+.labels
+{
+    margin-left: 10px;
+    font-size: 19px;
+    color: #EA1530;
+    font-weight: Bold;
+    font-family: Darker Grotesque, sans-serif;
+}
+.btn
+{
+    background-color: #EA1530;
+    color: whitesmoke;
+    padding: 5px 35px;
+    text-align: center;
+    margin-top: 40px; 
+    margin-left: 135px; 
+    font-size: 20px;
+    letter-spacing: 2px;
+    border: none;
+}
+.customizeBtn
+{
+    background-color: #EA1530;
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 275px; 
+    font-size: 20px;
+    font-family: 'Darker Grotesque';
+    border: none;
+    cursor: pointer;
+}
