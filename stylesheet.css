@@ -54,6 +54,22 @@ body
     letter-spacing: 2px;
     border: none;
 }
+.githubLinkBtn
+{
+    background-color: #EA1530;
+    text-align: center;
+    margin-top: 78px;
+    margin-left: 5px; 
+    font-size: 20px;
+    font-family: 'Darker Grotesque';
+    border: none;
+    cursor: pointer;
+}
+.githubLinkBtn a
+ {
+     color: whitesmoke;
+     text-decoration: none;
+ }
 .customizeBtn
 {
     background-color: #EA1530;
