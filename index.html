@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS-1</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container" :style="{backgroundColor: bgColor}">
+            <button class="customizeBtn" @click="show()"><i class="fas fa-edit"></i>
+                Customize</button>
+            <h2 :style="titleStyle">{{ title }}</h2>
+            <label for="Email" :style="[labels,{color:emailTextColor}]"> Email: </label>
+            <input id="Email" type="email"
+                :style="[{height : '25px'},{width : '60%'},{marginTop : '100px'},{marginLeft : '36px'}]">
+            <label for="Passowrd" :style="[labels,{color:passwordTextColor}]"> Passowrd: </label>
+            <input id="Passowrd" type="password"
+                :style="[{height : '25px'},{width : '60%'},{marginTop : '20px'},{marginLeft : '5px'}]">
+            <button class="btn"
+                :style="[{backgroundColor: buttonBgColor},{color:buttonTextColor},{fontFamily: 'Darker Grotesque'}]">Register</button>
+
+        </div>
+        <div class="customizeContainer" :style="{display: displayContainer}">
+            <button class="customizeBtn" @click="hide()"><i class="fas fa-times"></i> Save&close</button>
+            <h2 class="heading"> Customize App</h2>
+            <label class="labels">Change Background color : </label>
+            <input type="text" v-model="bgColor">
+            <br>
+            <label class="labels" for="Color">Change Title Color: </label>
+            <input type="text" v-model="color">
+            <br>
+            <label class="labels" for="Color">Change Email Text Color : </label>
+            <input type="text" v-model="emailTextColor">
+            <br>
+            <label class="labels" for="Color">Change Password Text Color: </label>
+            <input type="text" v-model="passwordTextColor">
+            <br>
+            <label class="labels" for="Color">Change Button Background : </label>
+            <input type="text" v-model="buttonBgColor">
+            <br>
+            <label class="labels" for="Color">Change Button Text Color : </label>
+            <input type="text" v-model="buttonTextColor">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data:
+            {
+                title: "My First App",
+                color: '#EA1530',
+                bgColor: '#15EACF',
+                buttonBgColor: '#EA1530',
+                buttonTextColor: 'whitesmoke',
+                emailTextColor: '',
+                buttonTextColor: 'whitesmoke',
+                emailTextColor: '#EA1530',
+                passwordTextColor: '#EA1530',
+                displayContainer: 'none',
+            },
+            computed:
+            {
+                titleStyle: function () {
+                    return {
+                        color: this.color,
+                        marginLeft: 100 + 'px',
+                    };
+                },
+                labels: function () {
+                    return {
+                        marginLeft: '30px',
+                        fontSize: '19px',
+                        color: '#EA1530',
+                        fontWeight: 'Bold',
+                        fontFamily: 'Darker Grotesque, sans-serif',
+                    };
+                },
+            },
+            methods:
+            {
+                show: function () {
+                    this.displayContainer = 'block';
+                },
+                hide: function () {
+                    this.displayContainer = 'none';
+                },
+            }
+        });
+    </script>
+</body>
+
+</html>
